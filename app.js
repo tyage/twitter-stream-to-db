@@ -17,13 +17,15 @@ const client = new Twitter({
   access_token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET
 });
 
-const stream = client.stream('statuses/filter', {track: 'javascript'});
+const stream = client.stream('statuses/filter', {track: process.env.TRACK_WORD});
 stream.on('data', function(event) {
-  console.log(event);
-
   const tweet = {
-    text: event.text
+    tweet_id: event.id_str,
+    text: event.text,
+    screen_name: event.user.screen_name,
+    username: event.user.name
   };
+  console.log(tweet);
   connection.query('INSERT INTO tweets SET ?', tweet, function (error, results, fields) {
     if (error) throw error;
   });
