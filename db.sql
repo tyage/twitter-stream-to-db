@@ -5,3 +5,4 @@ CREATE TABLE tweets (
   screen_name VARCHAR(255),
   username VARCHAR(255)
 );
+ALTER TABLE tweets DEFAULT CHARACTER SET utf8mb4;
