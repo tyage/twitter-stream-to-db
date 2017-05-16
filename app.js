@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Twitter = require('twitter');
 
 const client = new Twitter({
@@ -9,7 +10,7 @@ const client = new Twitter({
 
 const stream = client.stream('statuses/filter', {track: 'javascript'});
 stream.on('data', function(event) {
-  console.log(event && event.text);
+  console.log(event);
 });
 
 stream.on('error', function(error) {
