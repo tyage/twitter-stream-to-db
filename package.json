@@ -1,0 +1,23 @@
+{
+  "name": "twitter-stream-to-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "twitter": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyage/twitter-stream-to-db.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyage/twitter-stream-to-db/issues"
+  },
+  "homepage": "https://github.com/tyage/twitter-stream-to-db#readme"
+}
