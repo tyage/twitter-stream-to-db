@@ -1,8 +1,7 @@
 CREATE TABLE tweets (
   id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
   tweet_id VARCHAR(255),
-  text TEXT,
+  text VARCHAR(255),
   screen_name VARCHAR(255),
   username VARCHAR(255)
-);
-ALTER TABLE tweets DEFAULT CHARACTER SET utf8mb4;
+) character set utf8mb4;

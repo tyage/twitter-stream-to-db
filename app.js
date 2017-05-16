@@ -7,9 +7,10 @@ const connection = mysql.createConnection({
   user: process.env.MYSQL_USER,
   password: process.env.MYSQL_PASSWORD,
   database: process.env.MYSQL_DATABASE,
-  charset: process.env.MYSQL_CHARSET || 'UTF8_GENERAL_CI'
+  charset: 'utf8mb4'
 });
 connection.connect();
+connection.query('SET NAMES utf8mb4');
 
 const client = new Twitter({
   consumer_key: process.env.TWITTER_CONSUMER_KEY,
